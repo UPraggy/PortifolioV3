@@ -1,0 +1,14 @@
+
+
+:root {
+    --white-color: #FFFFFF;
+    --yellowGold-color: #EEB600;
+    --shdow-blue-bg: #34353A;
+    --shdow-gray-bg : #5E6069;
+}
+	
+
+[data-theme="dark"] {
+    /*_____- Dark Mode -_______*/
+    --bg-color: #575757;
+}

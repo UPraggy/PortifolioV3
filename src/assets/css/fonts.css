@@ -1,0 +1,25 @@
+@font-face {
+    font-family: 'Cardo-Bold';
+    src: local('Cardo-Bold'), url('../fonts/Cardo-Bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'DancingScript-Regular';
+    src: local('DancingScript-Regular'), url('../fonts/DancingScript-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'FanwoodText-Regular';
+    src: local('FanwoodText-Regular'), url('../fonts/FanwoodText-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Cardo-Regular';
+    src: local('Cardo-Regular'), url('../fonts/Cardo-Regular.ttf') format('truetype');
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Rowdies:wght@300;400&display=swap');
+
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@500;600;700&display=swap');
