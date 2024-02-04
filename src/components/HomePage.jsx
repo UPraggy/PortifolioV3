@@ -1,48 +1,56 @@
-import '../assets/css/Principais.css'
-import '../assets/css/fonts.css'
 import '../assets/css/homePage.css'
-import '../assets/css/colors.css'
-import TopMenu from './TopMenu'
-// import Rodape from './Rodape.jsx'
-import { useEffect, useState } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { useEffect, useReducer } from 'react'
 import GlobalVar from './subComponents/GlobalVar'
+import ReducerHomePage from './subComponents/ReducerHomePage.jsx'
 
-var windowHeight = window.screen.availHeight;
+
+// var windowHeight = window.screen.availHeight;
 export default function HomePage(props){
 
-    const navigate = useNavigate();
+    const [stateInfo, dispachInfo] = useReducer(ReducerHomePage.preencheInfo, {nomeResponsivo1Pagina: 'Rafael M. R. de Rezende',
+    componentesTranslate: false})
 
     useEffect(() => {
         GlobalVar.setLocalStorage('menuSelected','HomePage')
+
       }, []);
 
+    const ativaResp = props.ativaResp
+
+    useEffect(()=>{
+            if (ativaResp === true){
+                dispachInfo({type:'nomeResponsivo1Pagina', value: 'Rafael Moreira'})
+            }else{
+            }
+            setTimeout(()=>dispachInfo({type:'componentesTranslate', value: true}),500)
+            setTimeout(()=>dispachInfo({type:'componentesFoto', value: true}),300)
+        },[ativaResp])
+
     return <>
-    <TopMenu />
-        {/* <div className="containerPrincipal homePage" style={{minHeight: "86vh", maxHeight: windowHeight*0.80, backgroundColor: "#E4E5E5", display: 'flex',
-    flexDirection: 'column', justifyContent: "flex-end", overflowY: "hidden"}}>
+    
+        <div className="containerPrincipal homePage" style={{minHeight: "82vh"}}>
 
-            <div className={`homelogo ${logoAnimation ? 'logoAnima' : ''}`}></div>
+            <div className="container apresentInicial">
+                <div className="componentesNomeDesc" style={stateInfo.componentesTranslate ? {transform: 'none'} : {}}>
 
-            <div className={`homeBtnDiv ${btnsHome ? 'btnHomeAnima' : ''}`}>
-                <div className="homebuttons homeBtnMov" onClick={()=>navigate("/Movimentacoes")}>
-                    <div className="homebtnImg"></div>
-                    <div className="homebtnText">Movimentações</div>
+                    <div className="nomePort">{stateInfo.nomeResponsivo1Pagina}</div>
+                    <div className="descLeft">Tenho experiência como <span>desenvolvedor
+                            Full-Stack{!ativaResp ? <br /> : <></>} e Designer</span>, seja Bem Vindo ao meu Portfólio!
+                    </div>
+                    {!ativaResp ? <div className="saibaMais" onClick={()=> window.location.href = 'https://www.linkedin.com/in/rafael-moreira-ramos-de-rezende-16420b21b/'}>Saiba Mais</div> : <></>}
                 </div>
-                <div className="homebuttons homeBtnFin" onClick={()=>navigate("/Financeiro")}>
-                    <div className="homebtnImg"></div>
-                    <div className="homebtnText">Financeiro</div>
+                <div className="componentesFoto" style={stateInfo.componentesTranslate ? {scale: '1'} : {}}>
+                    <div className="fotoPortifolio"></div>
+                </div>
+                <div className="componentesServicos" style={stateInfo.componentesTranslate ? {transform: 'none'} : {}}>
+                    <div className="servicosTitle">Serviços</div>
+                    <div className="servicosDesc">Vamos construir softwares com qualidade {!ativaResp ? <br /> : <></>}tanto em programação 
+                    quanto em design, {!ativaResp ? <br /> : <></>}com meus serviços!
+                    </div>
+                    {ativaResp ? <div className="saibaMais" onClick={()=> window.location.href = 'https://www.linkedin.com/in/rafael-moreira-ramos-de-rezende-16420b21b/'}>Saiba Mais</div> : <></>}
                 </div>
             </div>
 
-        <div className="homeWaves">
-            <div className="homeWave3"></div>
-            <div className="homeWave2"></div>
-            <div className="homeWave1"></div>
         </div>
-
-
-        </div> */}
-        {/* <Rodape /> */}
     </>
 }
