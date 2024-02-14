@@ -1,10 +1,12 @@
 import '../assets/css/Principais.css'
 import '../assets/css/fonts.css'
 import '../assets/css/colors.css'
+import '../assets/css/scrollbar.css'
 import HomePage from './HomePage';
 import Habilidades from './Habilidades';
 import TopMenu from './TopMenu';
 import { useEffect, useState } from 'react';
+import Carreira from './Carreira';
 
 var windowHeight = window.screen.availHeight;
 export default function Main(props){
@@ -24,5 +26,6 @@ export default function Main(props){
         <TopMenu ativaResp={ativaResp}/>
         <HomePage ativaResp={ativaResp}/>
         <Habilidades ativaResp={ativaResp}/>
+        <Carreira ativaResp={ativaResp}/>
     </div>
 }
