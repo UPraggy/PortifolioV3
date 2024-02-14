@@ -27,11 +27,8 @@ export default function Habilidades(props){
         window.removeEventListener('scroll', handleScroll);
         };
     }, []);
-
-    useEffect(() => {
-        console.log(habltContainerInView)
-      }, [habltContainerInView]);
-
+    
+    const verificaTop = (element) => element.current ? scrollPosition-titleHablt.current.getBoundingClientRect().top < 10 : false
     return <>
         <div className="divisorHablt">
             <div></div>
@@ -40,7 +37,7 @@ export default function Habilidades(props){
         </div>
         <div className="containerPrincipal habilidades" style={{minHeight: "100vh"}}>
                 <div className="titleHablt" ref={titleHablt}
-                            style={ titleHablt.current ? {transform: scrollPosition-titleHablt.current.getBoundingClientRect().top < 10 ? 
+                            style={ titleHablt.current ? {transform:  verificaTop(titleHablt) ? 
                                 `translateX(${scrollPosition-titleHablt.current.getBoundingClientRect().top}px)` : `translateX(0px)`} : {}}>
                                 Minhas Habilidades
                 </div>
