@@ -3,7 +3,7 @@
     justify-content: space-between;
     position: fixed;
     top:0;
-    background-color: var(--shdow-blue-bg);
+    /* background-color: var(--shdow-blue-bg); */
     width: 100%;
     height: 12vh;
     padding: 0 0; 
