@@ -1,118 +1,114 @@
 .rodape {
     display: flex;
-    position: relative;
-    justify-content: space-between;
-    background-color: #000000;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     width: 100%;
+    background-color: var(--gray-rodape);
     overflow-x: hidden;
-    height: 12vh;
-    -webkit-box-shadow: 0px 0px 15px 0px #00000040;
-    -moz-box-shadow: 0px 0px 15px 0px #00000040;
-    box-shadow: 0px 0px 15px 0px #00000040;
-    font-family: 'Cardo-Bold';
-    color: #FFFFFF;
-    z-index: 10000 !important;
+    min-height: 12vh;
+    padding: 20px 0;
+}
+
+.rodape .fraseContext{
+    -webkit-text-stroke: 0px #000000c0;
+    background-color: transparent;
+    color: var(--white-color);
+    font-family: 'Inter', sans-serif;
+    font-size: 1.5em;
+    font-weight: 600;
+    text-shadow: 0px 4px 4px #121212e2;
+}
+
+.rodape .fraseContext > span{
+    color: var(--yellowGold-color);
 }
 
 
-.rodape .logo{
-    height: 55%;
-    margin-left: 5vw;
-    background-image: url('../imgs/logoBabitaW.png');
+.rodape .card{
+    width: 80%;
+    padding: 10px 10px;
+    background-color: var(--white-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+    margin: 20px 0;
+}
+
+
+.rodape .copyright{
+    display: flex;
+    align-items: center;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 700;
+    color: var(--shdow-blue-bg);
+}
+
+.rodape .copyright .copyrightImg{
+    width: 40px;
+    aspect-ratio: 1/1;
+    background-image: url('../imgs/rodape/copyright.svg');
     background-size: contain;
     background-repeat: no-repeat;
-    aspect-ratio: 25/8;
-    width: -moz-fit-content;
-    width: fit-content;
-}
-
-.rodape > div{
-    margin: auto 0;
+    margin-right: 5px;
 }
 
 .rodape .socials{
-    font-size: 1.18em;
-    margin-right: 5vw;
-}
-
-.rodape .logosSocial{
     display: flex;
-    width: max-content;
-    margin-bottom: 5%;
-    cursor: pointer;
 }
 
-.rodape .logosSocial div:hover{
-    opacity: 0.8;
-}
-
-.rodape .logosSocial div{
-    height: 40px;
+.rodape .socials > div {
+    width: 40px;
+    aspect-ratio: 1/1;
     background-size: contain;
     background-repeat: no-repeat;
-    margin-left: 10%;
+    background-position: center;
+    margin: 0 8px;
+}
+.rodape .socials .gitSoc{
+    background-image: url('../imgs/rodape/github.png');
 }
 
-.rodape .instaSoc{
-    width: 40px;
-    background-image: url('../imgs/insta.png');
+.rodape .socials .linkdInSoc{
+    background-image: url('../imgs/rodape/linkdIn.png');
 }
 
-.rodape .faceSoc{
-    width: 40px;
-    background-image: url('../imgs/face.png');
+.rodape .socials .mailSoc{
+    background-image: url('../imgs/rodape/email.png');
 }
 
-.rodape .youtSoc{
-    background-image: url('../imgs/youtube.png');
-    width: 57px;
+.rodape .socials .phoneSoc{
+    background-image: url('../imgs/rodape/phone.png');
 }
 
 @media(max-width: 767px){
-    .rodape {
-        flex-direction: column;
-        align-items: center;
-        padding: 7% 0;
-        height: max-content;
-    }
-
-    .rodape .logo {
-        height: auto;
-        width: 40vw;
-        margin: 2% auto 5% auto;
-    }
-
-    .rodape .socials {
-        font-size: 1.5em;
-        margin-right: 0;
-        width: 60%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .rodape .logosSocial div {
-        margin-left: 0%;
-    }
-
-    .rodape .logosSocial {
-        width: 80%;
-        justify-content: space-evenly;
-    }
-
-    .rodape .lineBarRodape{
-        height: 3px;
+    .rodape .fraseContext{
+        font-size: 1.2em;
         width: 90%;
-        margin: 5% auto 6% auto;
-        background-color: #FFFFFF;
+        text-align: center;
     }
 
-    .rodape .info{
-        font-size: 1.4em;
-        width: 85%;
+    .rodape .card{
+        flex-direction: column;
     }
 
-    .rodape .info div:nth-child(1){
-        margin-bottom: 3%;
+    .rodape .copyright{
+        margin-bottom: 20px;
+        text-align: center;
     }
-}
+
+    .rodape .copyright .copyrightImg{
+        display: none;
+    }
+
+    .rodape .socials{
+        display: flex;
+        justify-content: space-evenly;
+        width: 100%;
+    }
+    
+    .rodape .socials > div {
+        margin-top: 9px auto 4px auto;
+    }
+}  

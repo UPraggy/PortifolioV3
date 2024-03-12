@@ -1,0 +1,176 @@
+:root{
+    --projects-colorStatus: #2863FC;
+}
+
+.projects{
+    display: grid;
+    grid-template-columns: 60%;
+    justify-content: center;
+    padding-top: 5%;
+    transition: all 3s;
+}
+
+.projects .projItemContainer{
+    display: grid;
+    grid-template-columns: 49% 49%;
+    grid-gap: 100px 2%;
+    text-align: right;
+    justify-content: flex-end;
+    transition: all 1s;
+}
+
+
+
+
+.projects .projItemLeft{
+    transition: all 1s;
+}
+
+.projects .projItemLeft .projItemType{
+    font-family: 'Inter', sans-serif;
+    font-weight: 200;
+    font-size: 1.5em;
+}
+
+.projects .projItemLeft .projItemTitle{
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 500;
+    font-size: 2.5em;
+}
+
+.projects .projItemStatus{
+    width: fit-content;
+    margin: 0.4em 0 0.4em auto;
+    padding: 4px 20px;
+    border-radius: 5px;
+    background-color: var(--projects-colorStatus);
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 500;
+    color: var(--white-color);
+    font-size: 1em;
+}
+
+.projects .projItemLeft .buttonDetails{
+    width: 50px;
+    aspect-ratio: 1/1;
+    margin: 0.4em 0 0.4em auto;
+    cursor: pointer; 
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.projects .projItemLeft .projItemDesc{
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    font-size: 1.7em;
+}
+
+
+
+.projects .projectImageContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: fit-content;
+    aspect-ratio: 1/1;
+    transition: all 1s;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+}
+
+.projectImageBox{
+    width: 100%;
+    aspect-ratio: 1/1;
+    background-color: #ccc5b9;
+    border-radius: 15px;
+}
+
+.projectImageBack{
+    position: absolute;
+    width: 90%;
+    aspect-ratio: 1/1;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.projects .projItemImage{
+    position: absolute;
+    width: 90%;
+    aspect-ratio: 1/1;
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition: all 1s;
+    transform-style: preserve-3d;
+    transform-origin: top;
+
+    /*width: 75%;
+    transform: translateZ(100px) translateY(-40%);
+    top: 40%;
+    border-radius: 15px;*/
+}
+
+
+.projects .projectVideo{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    aspect-ratio: 2/1;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+
+
+@media(max-width: 767px){
+
+    .projects{
+        grid-template-columns: 70%;
+        padding-top: 100px;
+    }
+
+    .projects .projItemContainer {
+        grid-template-columns: 100%;
+        grid-gap: 10px 0;
+        margin-bottom: 100px;
+    }
+
+    .projects .projItemLeft .projItemType {
+        text-align: left;
+        font-size: 1.3em;
+    }
+
+    .projects .projItemLeft .projItemTitle {
+        text-align: left;
+        font-size: 2.8em;
+    }
+
+    .projects .projItemStatus {
+        margin: 0 0 0.4em auto;
+    }
+
+    .projects .projItemDesc{
+        text-align: left;
+    }
+
+    .projects .projectVideo {
+        position: relative;
+        font-size: 10px;
+    }
+
+    .projectVideo::-webkit-media-controls-panel {
+        resize: both; /* Permite redimensionamento nas duas dimensões */
+        /* font-size: 6px; Redimensione o tamanho do ícone de reprodução/pausa conforme necessário */
+        width: 10px; /* Defina a largura desejada */
+    }
+
+    .projects .projectImageContainer {
+        aspect-ratio: auto;
+    }
+
+    .projects .projItemDesc{
+        font-family: 'Inter', sans-serif;
+        font-weight: 300;
+        font-size: 1.1em;
+    }    
+}
