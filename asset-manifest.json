@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "./static/css/main.8f7b2c4f.css",
+    "main.js": "./static/js/main.494b02a6.js",
+    "static/js/453.2d5f6301.chunk.js": "./static/js/453.2d5f6301.chunk.js",
+    "static/media/Cardo-Regular.ttf": "./static/media/Cardo-Regular.4ad75d4da97e1cf6655b.ttf",
+    "static/media/Cardo-Bold.ttf": "./static/media/Cardo-Bold.c2984dcfbf0213139033.ttf",
+    "static/media/fundoEsqAzul.png": "./static/media/fundoEsqAzul.d4290307608ea888ce19.png",
+    "static/media/FanwoodText-Regular.ttf": "./static/media/FanwoodText-Regular.81fb0916bffb98af80d4.ttf",
+    "static/media/DancingScript-Regular.ttf": "./static/media/DancingScript-Regular.5bfc0dcc0c0ff5a2832e.ttf",
+    "index.html": "./index.html",
+    "main.8f7b2c4f.css.map": "./static/css/main.8f7b2c4f.css.map",
+    "main.494b02a6.js.map": "./static/js/main.494b02a6.js.map",
+    "453.2d5f6301.chunk.js.map": "./static/js/453.2d5f6301.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8f7b2c4f.css",
+    "static/js/main.494b02a6.js"
+  ]
+}
